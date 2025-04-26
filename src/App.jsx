@@ -12,7 +12,7 @@ function App() {
     event.preventDefault();
     try {
       const response = await axios.post(
-        "https://jacksonlifeinsurance-d4h5gfacebhbf7e4.southindia-01.azurewebsites.net/auth/getToken",
+        "https://jacksonbackend-c2b2cdg7hkdwc7eu.canadacentral-01.azurewebsites.net/auth/getToken",
         {
           Username: username,
           Password: password,
@@ -47,7 +47,7 @@ function App() {
       </form>
       <div
         style={{
-          width: "500px",
+          width: "00px",
           border: "solid black 1px",
           height: "auto",
           overflow: "auto",
