@@ -30,7 +30,7 @@ function App() {
   return (
     <>
       <h2>Jackson Life Insurance Pvt. Ltd.</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={{ marginBottom: "10px" }}>
         <label htmlFor="username"></label>
         <input
           placeholder="Enter Username"
@@ -45,7 +45,18 @@ function App() {
         />
         <button type="submit">Login</button>
       </form>
-      <div>{token}</div>
+      <div
+        style={{
+          width: "500px",
+          border: "solid black 1px",
+          height: "auto",
+          overflow: "auto",
+          wordBreak: "break-word",
+          overflowWrap: "break-word",
+        }}
+      >
+        {token}
+      </div>
     </>
   );
 }
