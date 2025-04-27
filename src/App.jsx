@@ -18,7 +18,7 @@ function App() {
           Password: password,
         }
       );
-
+      //It will set the token
       console.log(response.data);
       setToken(response.data);
     } catch (error) {
