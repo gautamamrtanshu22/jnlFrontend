@@ -47,9 +47,8 @@ function App() {
       </form>
       <div
         style={{
-          width: "00px",
+          width: "400px",
           border: "solid black 1px",
-          height: "auto",
           overflow: "auto",
           wordBreak: "break-word",
           overflowWrap: "break-word",
