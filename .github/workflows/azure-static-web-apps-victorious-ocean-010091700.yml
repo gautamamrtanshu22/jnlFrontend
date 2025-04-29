@@ -28,8 +28,7 @@ jobs:
         with:
           inlineScript: |
             az storage blob upload-batch \
-              --source-string ./dist \
+              --source ./dist \
               --destination '$web' \
-              --source dist \
               --account-name ${{secrets.STORAGE_ACCOUNT}}
               --overwrite
