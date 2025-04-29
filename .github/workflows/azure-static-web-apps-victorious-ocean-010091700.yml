@@ -1,41 +1,31 @@
 name: Build and deploy React app to Azure Storage Account
-
-on:
+"on":
   push:
     branches:
       - master
-  workflow_dispatch:
-
+  workflow_dispatch: null
   env:
-   NODE_VERSION: "10.x"
-   STORAGE_ACCOUNT:"jnlpoc"
-
+    NODE_VERSION: 10.x
+    'STORAGE_ACCOUNT:"jnlpoc"': null
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "18.x"
-
+          node-version: 18.x
       - name: Install dependencies
         run: npm install
-
       - name: Build React app
         run: npm run build
-
       - name: Check dist folder
         run: ls -R dist
-
       - name: Azure Login
         uses: azure/login@v2
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
+          creds: "${{ secrets.AZURE_CREDENTIALS }}"
       - name: Deploy to Azure Storage
         uses: azure/cli@v2
         with:
