@@ -4,9 +4,6 @@ name: Build and deploy React app to Azure Storage Account
     branches:
       - master
   workflow_dispatch: null
-  env:
-    NODE_VERSION: 10.x
-    'STORAGE_ACCOUNT:"jnlpoc"': null
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
