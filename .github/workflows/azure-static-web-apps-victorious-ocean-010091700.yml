@@ -34,5 +34,5 @@ jobs:
               --source-string ./dist \
               --destination '$web' \
               --source dist \
-              --account-name ${{env.STORAGE_ACCOUNT}}
+              --account-name ${{secrets.STORAGE_ACCOUNT}}
               --overwrite
